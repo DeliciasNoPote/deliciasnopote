@@ -1,89 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delícias no Pote</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delícias no Pote | Batatas no Pote</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff8f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffaf5;
+      color: #444;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff8100, #ffb300);
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+      font-size: 26px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    header p {
+      font-size: 16px;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    .hero {
+      margin: 25px auto;
+      max-width: 950px;
       text-align: center;
     }
 
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      max-width: 400px;
+    .hero img {
       width: 90%;
+      max-width: 500px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     }
 
-    h1 {
-      color: #d35400;
-      margin-bottom: 10px;
+    .hero h2 {
+      font-size: 28px;
+      margin-top: 18px;
+      color: #d44d00;
     }
 
-    p {
-      color: #444;
-      margin-bottom: 20px;
+    .buttons {
+      margin: 18px 0;
     }
 
     .btn {
-      display: block;
       text-decoration: none;
-      padding: 14px;
-      margin: 10px 0;
+      padding: 14px 22px;
       border-radius: 12px;
+      font-size: 17px;
       font-weight: bold;
-      font-size: 16px;
+      margin: 6px;
+      display: inline-block;
       transition: 0.2s;
     }
 
-    .btn-whats {
-      background: #25D366;
+    .btn:hover {
+      transform: scale(1.06);
+    }
+
+    .whatsapp {
+      background: #25d366;
       color: white;
     }
 
-    .btn-ifood {
+    .ifood {
       background: #ea1d2c;
       color: white;
     }
 
-    .btn:hover {
-      opacity: 0.9;
-      transform: scale(1.02);
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: 24px;
+      color: #d35400;
+      font-weight: bold;
+    }
+
+    .menu {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      padding: 0 18px 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 14px;
+    }
+
+    .card h3 {
+      margin: 12px 0 6px;
+      color: #d44d00;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      opacity: 0.88;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #000;
+      font-size: 15px;
     }
 
     footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: gray;
+      text-align: center;
+      padding: 20px;
+      background: #ff7a00;
+      color: white;
+      font-size: 14px;
     }
+
+    /* floating bar */
+    #float-bar {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      display: flex;
+      gap: 14px;
+      z-index: 999;
+    }
+
+    #float-bar a {
+      text-decoration: none;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+      transition: 0.25s;
+    }
+    #float-bar a:hover {
+      transform: scale(1.12);
+    }
+    #float-bar .wht { background: #25d366; }
+    #float-bar .ifd { background: #e81d2c; }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>🍮 Delícias no Pote</h1>
-    <p>Bem-vindo! Clique abaixo para falar conosco ou pedir no iFood.</p>
 
-    <a class="btn btn-whats" href="https://wa.me/55SEUNUMEROAQUI" target="_blank">
-      📲 Falar no WhatsApp
-    </a>
+  <header>
+    🍟 Delícias no Pote
+    <p>Batatas Recheadas no Pote — direto do iFood!</p>
+  </header>
 
-    <a class="btn btn-ifood" href="https://www.ifood.com.br" target="_blank">
-      🍽️ Pedir no iFood
-    </a>
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1604908554007-38a36e85fd4b?auto=format&fit=crop&w=900&q=80" alt="Batatas Recheadas">
+    <h2>As batatas mais recheadas e saborosas da cidade!</h2>
 
-    <footer>
-      © 2026 - Delícias no Pote
-    </footer>
+    <div class="buttons">
+      <a class="btn whatsapp" href="https://wa.me/55SEU_WHATSAPP" target="_blank">📲 WhatsApp</a>
+      <a class="btn ifood" href="LINK_DO_IFOOD" target="_blank">🍽️ iFood</a>
+    </div>
   </div>
+
+  <h2 class="section-title">🍽️ Nosso Cardápio</h2>
+
+  <div class="menu">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="Batata Frango">
+      <h3>Batata Recheada Frango</h3>
+      <p>Saborosa batata com frango desfiado e muita cremosidade.</p>
+      <p class="price">R$ 24,90*</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg" alt="Batata Calabresa">
+      <h3>Batata Calabresa com Cheddar</h3>
+      <p>Calabresa picante com cheddar derretido por cima.</p>
+      <p class="price">R$ 26,90*</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" alt="Batata Bacon">
+      <h3>Batata Bacon C/ Queijo</h3>
+      <p>Bacon crocante e queijo cremoso — puro sabor.</p>
+      <p class="price">R$ 27,90*</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Batata Queijos">
+      <h3>Batata 4 Queijos</h3>
+      <p>Muito queijo derretido para os amantes de cremosidade.</p>
+      <p class="price">R$ 29,90*</p>
+    </div>
+  </div>
+
+  <footer>
+    * Preços ilustrativos — confira o preço real no iFood.  
+    📍 Faça seu pedido agora mesmo!
+  </footer>
+
+  <!-- floating bottom bar -->
+  <div id="float-bar">
+    <a class="wht" href="https://wa.me/55SEU_WHATSAPP" target="_blank">📲 WhatsApp</a>
+    <a class="ifd" href="https://www.ifood.com.br/delivery/londrina-pr/delicias-no-pote-santa-rita-1/8e648b6d-1f9b-4ec6-a911-9b2448c89c83" target="_blank">🍽️ iFood</a>
+  </div>
+
 </body>
 </html>
